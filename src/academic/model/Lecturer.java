@@ -4,19 +4,20 @@ package academic.model;
  * @author 12S24055 Theresia Oktaviani Samosir
  */
 
-public class Student {
+public class Lecturer{
     private String id;
     private String name;
-    private String year;
+    private String initial;
+    private String email;
     private String studyProgram;
-   
-    public Student(String id, String name, String year, String studyProgram) {
-        this.id = id;
-        this.name = name;
-        this.year = year;
-        this.studyProgram = studyProgram;
-    }
 
+    public Lecturer(String id, String name, String initial, String email, String studyProgram) {
+        this.id = id;
+        this.initial = initial;
+        this.email = email;
+        this.studyProgram = studyProgram;
+        this.name = name;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -30,30 +31,32 @@ public class Student {
         return name;
     }
 
-    public String getYear() {
-        return year;
+    public void setInitial(String initial) {
+        this.initial = initial;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public String getInitial() {
+        return initial;
     }
 
-
-    public String getStudyProgram() {
-        return studyProgram;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
+    public String getEmail() {
+        return email;
+    }
 
     public void setStudyProgram(String studyProgram) {
         this.studyProgram = studyProgram;
     }
-
+    
     public String getId() {
         return id;
     }
 
     @Override
     public String toString() {
-        return id + "|" + name + "|" + year + "|" + studyProgram;
+        return id + "|" + name + "|" + initial + "|" + email + "|" + studyProgram;
     }
 }
